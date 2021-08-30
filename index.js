@@ -26,7 +26,7 @@ qs('div[data-item=c3]').addEventListener('click', itemClick);
 // Funções
 function itemClick(event) {
     let item = event.target.getAttribute('data-item');
-    if(square[item] === '') {
+    if(playing && square[item] === '') {
         square[item] = playerTurn;
         renderSquare();
         togglePlayer();
